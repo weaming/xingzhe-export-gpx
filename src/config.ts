@@ -3,8 +3,8 @@ const user_month_info = '/api/v4/user_month_info/'
 // 选择下载年份
 const year = '2023'
 // 填写个人user_id
-const user_id = ''
-// 填写个人xingzhe cookie
+const user_id = '6413500'
+// 填写个人xingzhe cookie, https://imxingzhe.com
 const xingzhe_cookie = ''
 module.exports = {
   xingzhe_prefix,
