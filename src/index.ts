@@ -27,6 +27,7 @@ async function main() {
               console.log(err, 'err-----');
             }
           });
+          console.log(item?.title)
         })
       }
     });
