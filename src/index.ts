@@ -8,10 +8,6 @@ const getMonthList = (month: number) => {
   return clientX.get( `${xingzhe_prefix}${user_month_info}?user_id=${user_id}&year=${year}&month=${month}`)
 }
 
-function delay(ms: number) {
-  return new Promise( resolve => setTimeout(resolve, ms) );
-}
-
 async function main() {
   const monthList = new Array(12).fill(0).map((_, index) => {
     return getMonthList(index + 1)
@@ -31,14 +27,8 @@ async function main() {
           const url = ` https://www.imxingzhe.com/xing/${item?.id}/gpx/`
           const {data} = await clientX.get(url)
           // 务必使用buffer，不要使用JSON.stringfy()
-          fs.writeFile(
-            output,
-            Buffer.from(data),
-            (err: any) => {
-              if (err) {
-                console.log(err, 'err-----')
-              }
-            },
+          fs.writeFile( output, Buffer.from(data), (err: any) => {
+              if (err) { console.log(err, 'err-----') } },
           )
           console.log(index+1, item?.title, '☑️')
         })
