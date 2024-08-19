@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist && tsc -w",
-    "download": "rm -rf download && mkdir download && node dist/index.js"
+    "download": "rm -rf download && mkdir download && node dist/index.js",
+    "retry": "node dist/index.js"
   },
   "author": "mxdneu",
   "license": "ISC",
